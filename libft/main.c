@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:48:44 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/21 17:00:26 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/09/21 17:26:14 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ int	main(int argc, char **argv)
 	{
 		int	i;
 
-		i = -5;
-		while (i < 300)
+		i = 0;
+		while (i < 256)
 		{
-			if (isalpha(i) == ft_isalpha(i))
+			if (isalpha(i) != ft_isalpha(i))
 			{
 				printf("%d \n", i);
 				printf("Real: %d \n", isalpha(i));
@@ -46,13 +46,31 @@ int	main(int argc, char **argv)
 	{
 		int	i;
 		i = -5;
-		while (i < 300)
+		while (i < 256)
 		{
-			if (isdigit(i) == ft_isdigit(i))
+			if (isdigit(i) != ft_isdigit(i))
 			{
 				printf("%d \n", i);
 				printf("Real: %d \n", isdigit(i));
 				printf(" Mia: %d \n", ft_isdigit(i));
+			}
+			i++;
+		}
+		return (1);
+	}
+	if (!strcmp(argv[1], "isalnum"))
+	{
+		int	i;
+
+		i = -5;
+		while (i < 256)
+		{
+			if (isalnum(i) != ft_isalnum(i))
+			{
+				printf("%d \n.", i);
+				write(1, &i, 1);
+				printf(".Real: %d \n", isalnum(i));
+				printf(" Mia: %d \n", ft_isalnum(i));
 			}
 			i++;
 		}
