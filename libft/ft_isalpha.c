@@ -6,14 +6,11 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:29:32 by sergio            #+#    #+#             */
-/*   Updated: 2022/09/21 13:02:50 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/09/21 16:21:31 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isupper(int c);
-int	ft_islower(int c);
+#include "ft_isalpha.h"
 
 int	ft_isalpha(int c)
 {

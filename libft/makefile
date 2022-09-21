@@ -4,11 +4,10 @@ AR=ar -crs
 NAME=libft.a
 
 all: libft.o
-		$(AR) $(NAME) *.o
-libf.o:	*.o
-		$(CC) -c *.o
-
+		ar -crs libft.a *.o
+libft.o:
+		gcc -c *.c
 clean: 
-		rm -rf *.0
-
+		rm -rf *.o
 fclean: 
+		rm -rf *.o *.a a.out

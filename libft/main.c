@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:48:44 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/21 16:06:23 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/09/21 17:00:26 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,17 @@
 
 int	main(int argc, char **argv)
 {
+	if (argc <= 1)
+	{
+		printf("Se te olvido el argumento :((\n");
+		return (-42);
+	}
+		
+
 	if (!strcmp(argv[1], "isalpha"))
 	{
 		int	i;
 
-		(void)argc;
-		(void)argv;
 		i = -5;
 		while (i < 300)
 		{
@@ -35,6 +40,7 @@ int	main(int argc, char **argv)
 			}
 			i++;
 		}
+		return (1);
 	}
 	if (!strcmp(argv[1], "isdigit"))
 	{
@@ -50,5 +56,6 @@ int	main(int argc, char **argv)
 			}
 			i++;
 		}
+		return (1);
 	}
 }

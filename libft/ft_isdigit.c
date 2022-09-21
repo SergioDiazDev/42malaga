@@ -6,11 +6,13 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:02:14 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/21 16:06:13 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/09/21 16:22:32 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+#include "ft_isdigit.h"
+
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (2048);
