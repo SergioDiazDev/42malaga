@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.h                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 17:32:06 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/21 17:33:14 by sdiaz-ru         ###   ########.fr       */
+/*   Created: 2022/09/21 18:04:23 by sdiaz-ru          #+#    #+#             */
+/*   Updated: 2022/09/21 18:23:38 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ISASCII_H
-# define FT_ISASCII_H
+#include "libft.h"
 
-int	ft_isascii(int c);
+int	ft_strlen(char *str)
+{
+	int	i;
 
-#endif
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}

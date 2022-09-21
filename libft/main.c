@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:48:44 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/21 17:53:06 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/09/21 18:29:54 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,5 +100,32 @@ int	main(int argc, char **argv)
 			i++;
 		}
 		return (1);
+	}
+	if (!strcmp(argv[1], "strlen"))
+	{
+		if (strlen("str") == ft_strlen("str"))
+			printf("correcto\n");
+		else
+			printf("Cagada\n");
+		if (strlen("") == ft_strlen(""))
+			printf("correcto\n");
+		else
+			printf("Cagada\n");
+		if (strlen("1qw2") == ft_strlen("1qw2"))
+			printf("correcto\n");
+		else
+			printf("Cagada\n");
+		if (strlen("\n\t") == ft_strlen("\n\t"))
+			printf("correcto\n");
+		else
+			printf("Cagada\n");
+		if (strlen(".r") == ft_strlen(".t"))
+			printf("correcto\n");
+		else
+			printf("Cagada\n");
+		if (strlen(" ") == ft_strlen("  "))
+			printf("cagada\n");
+		else
+			printf("Correcto\n");
 	}
 }

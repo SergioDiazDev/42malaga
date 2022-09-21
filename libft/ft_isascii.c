@@ -6,11 +6,11 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:31:58 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/21 17:35:45 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/09/21 18:19:18 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_isascii.h"
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

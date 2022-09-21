@@ -6,13 +6,11 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:12:21 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/21 17:35:27 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/09/21 18:19:08 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_isalnum.h"
-#include "ft_isalpha.h"
-#include "ft_isdigit.h"
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
