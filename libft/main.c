@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:48:44 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/21 17:40:29 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/09/21 17:53:06 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,21 @@ int	main(int argc, char **argv)
 				printf("%d \n.", i);
 				printf(".Real: %d \n", isascii(i));
 				printf(" Mia: %d \n", ft_isascii(i));
+			}
+			i++;
+		}
+		return (1);
+	}
+	if (!strcmp(argv[1], "isprint"))
+	{
+		i = 0;
+		while (i < 256)
+		{
+			if (isprint(i) == ft_isprint(i))
+			{
+				printf("%d \n.", i);
+				printf(".Real: %d \n", isprint(i));
+				printf(" Mia: %d \n", ft_isprint(i));
 			}
 			i++;
 		}

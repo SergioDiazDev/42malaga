@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 11:49:45 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/21 17:51:34 by sdiaz-ru         ###   ########.fr       */
+/*   Created: 2022/09/21 17:48:54 by sdiaz-ru          #+#    #+#             */
+/*   Updated: 2022/09/21 17:52:51 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "ft_isprint.h"
 
-# include "ft_isalpha.h"
-# include "ft_isdigit.h"
-# include "ft_isalnum.h"
-# include "ft_isascii.h"
-# include "ft_isprint.h"
-
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-
-#endif
+int	ft_isprint(int c)
+{
+	if (c >= ' ' && c <= '~')
+		return (16384);
+	return (0);
+}
