@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:48:44 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/21 17:26:14 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/09/21 17:40:29 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,15 @@
 
 int	main(int argc, char **argv)
 {
+	int	i;
+
 	if (argc <= 1)
 	{
 		printf("Se te olvido el argumento :((\n");
 		return (-42);
 	}
-		
-
 	if (!strcmp(argv[1], "isalpha"))
 	{
-		int	i;
-
 		i = 0;
 		while (i < 256)
 		{
@@ -44,8 +42,7 @@ int	main(int argc, char **argv)
 	}
 	if (!strcmp(argv[1], "isdigit"))
 	{
-		int	i;
-		i = -5;
+		i = 0;
 		while (i < 256)
 		{
 			if (isdigit(i) != ft_isdigit(i))
@@ -60,9 +57,7 @@ int	main(int argc, char **argv)
 	}
 	if (!strcmp(argv[1], "isalnum"))
 	{
-		int	i;
-
-		i = -5;
+		i = 0;
 		while (i < 256)
 		{
 			if (isalnum(i) != ft_isalnum(i))
@@ -71,6 +66,21 @@ int	main(int argc, char **argv)
 				write(1, &i, 1);
 				printf(".Real: %d \n", isalnum(i));
 				printf(" Mia: %d \n", ft_isalnum(i));
+			}
+			i++;
+		}
+		return (1);
+	}
+	if (!strcmp(argv[1], "isascii"))
+	{
+		i = 0;
+		while (i < 256)
+		{
+			if (isascii(i) == ft_isascii(i))
+			{
+				printf("%d \n.", i);
+				printf(".Real: %d \n", isascii(i));
+				printf(" Mia: %d \n", ft_isascii(i));
 			}
 			i++;
 		}

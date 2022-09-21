@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 17:12:21 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/21 17:35:27 by sdiaz-ru         ###   ########.fr       */
+/*   Created: 2022/09/21 17:31:58 by sdiaz-ru          #+#    #+#             */
+/*   Updated: 2022/09/21 17:35:45 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_isalnum.h"
-#include "ft_isalpha.h"
-#include "ft_isdigit.h"
+#include "ft_isascii.h"
 
-int	ft_isalnum(int c)
+int	ft_isascii(int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
-		return (8);
+	if (c >= 0 && c <= 127)
+		return (1);
 	return (0);
 }
