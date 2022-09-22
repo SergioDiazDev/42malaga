@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:48:44 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/21 18:29:54 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/09/22 13:24:00 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,5 +127,13 @@ int	main(int argc, char **argv)
 			printf("cagada\n");
 		else
 			printf("Correcto\n");
+	}
+	if (!strcmp(argv[1], "memset"))
+	{
+
+		char aux[] ="asñdfghjklñqwertyuiop";
+		memset(aux,'$', 50);
+
+		printf("%s", aux);
 	}
 }
