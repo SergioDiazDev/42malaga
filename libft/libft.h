@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:49:45 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/23 09:11:18 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/09/23 10:03:04 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ void	ft_bzero(void *s, t_size_t n);
 void	*ft_memcpy(void *dest, const void *src, t_size_t n);
 //ft_memmove
 void	*ft_memmove(void *str1, const void *str2, t_size_t n);
+//ft_strlcpy
+char	*ft_strlcpy(char *dest, const char *src, t_size_t size);
 
 #endif

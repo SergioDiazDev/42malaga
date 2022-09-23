@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:48:44 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/23 09:39:33 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/09/23 10:15:39 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,5 +154,14 @@ int	main(int argc, char **argv)
 
 		ft_memmove((aux + 3), aux, 16);
 		printf("%s", (aux + 3));
+	}
+	if (!strcmp(argv[1], "strlcpy"))
+	{
+		char	aux[] = "asñdfghjklñqwertyuiop";
+		char	dest[24];
+
+		strlcpy();
+		ft_strlcpy(dest, aux, 12);
+		printf("%s", dest);
 	}
 }
