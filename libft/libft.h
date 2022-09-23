@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:49:45 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/22 13:18:47 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/09/23 08:49:21 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,9 @@ int		ft_strlen(char *str);
 //ft_memset
 typedef int	t_size_t;
 void	*ft_memset(void *str, int c, t_size_t n);
+//ft_bzero
+void	ft_bzero(void *s, t_size_t n);
+//ft_ft_memcpy
+void	*ft_memcpy(void *dest, const void *src, t_size_t n);
 
 #endif

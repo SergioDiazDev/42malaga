@@ -4,11 +4,11 @@ AR=ar -crs
 NAME=libft.a
 
 all: libft.o
-		ar -crs libft.a *.o
+		$(AR) libft.a *.o
 libft.o:
-		gcc -c *.c
-comila: main.c libft.a
-		gcc -Wall -Werror -Wextra main.c libft.a
+		$(CC) -c *.c
+c: main.c $(NAME)
+		$(CC) $(CFLAGS) main.c $(NAME)
 clean: 
 		rm -rf *.o
 fclean: 
