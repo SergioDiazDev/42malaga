@@ -6,19 +6,18 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:04:23 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/28 17:42:02 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/01 19:40:46 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+t_size_t	ft_strlen(const char *str)
 {
-	int	i;
+	t_size_t	i;
 
 	i = 0;
 	while (str[i])
 		i++;
-	i++;
 	return (i);
 }
