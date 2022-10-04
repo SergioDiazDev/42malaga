@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:49:45 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/04 17:56:04 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/04 21:10:47 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,13 @@ char		*ft_strchr(const char *str, int c);
 char		*ft_strrchr(const char *str, int c);
 //ft_strncmp
 int			ft_strncmp(const char *str1, const char *str2, t_size_t n);
+//ft_memchr
+void		*ft_memchr(const void *str, int c, t_size_t n);
+//ft_memcmp
+int			ft_memcmp(const void *str1, const void *str2, t_size_t n);
+//ft_strnstr
+char		*ft_strnstr(const char *big, const char *little, t_size_t len);
+//ft_atoi
+int			ft_atoi(const char *str);
 
 #endif
