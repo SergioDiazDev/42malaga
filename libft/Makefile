@@ -24,10 +24,6 @@ $(NAME): $(OBJ)
 $(OBJ): $(SRC)
 		$(CC) $(CFLAGS) $(SRC) $(INCLUDE)
 
-so: $(SRC) $(OBJ)
-		clang -nostartfiles -fPIC $(CFLAGS) $(SRC)
-		gcc -nostartfiles -shared -o libft.so $(OBJ)
-
 re:
 		fclean all
 
