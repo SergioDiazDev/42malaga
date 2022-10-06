@@ -6,13 +6,13 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:51:05 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/04 17:10:55 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/06 16:53:46 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+static int	ft_isupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (1);

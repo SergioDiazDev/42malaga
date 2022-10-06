@@ -6,13 +6,13 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 17:12:54 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/04 17:14:38 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/06 16:53:36 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_islower(int c)
+static int	ft_islower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (1);

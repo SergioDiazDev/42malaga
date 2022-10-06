@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 20:22:50 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/04 20:29:24 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/06 16:54:58 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memchr(const void *str, int c, t_size_t n)
 {
-	char	*aux;
-	int		i;
+	char		*aux;
+	t_size_t	i;
 
 	aux = (char *)str;
 	i = 0;

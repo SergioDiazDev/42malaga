@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:08:57 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/03 18:05:49 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/06 17:50:19 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_size_t	ft_strlcat(char *dest, const char *src, t_size_t size)
 
 	i = ft_strlen(dest);
 	j = 0;
-	if (size - 1 > i)
+	if (size > i)
 	{
 		while (src[j] && i < size - 1)
 		{

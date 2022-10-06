@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 08:48:49 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/01 19:43:08 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/06 16:55:12 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memcpy(void *dest, const void *src, t_size_t n)
 {
-	int			i;
-	const char	*s;
-	char		*d;
+	t_size_t		i;
+	const char		*s;
+	char			*d;
 
 	s = src;
 	d = dest;

@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:49:45 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/04 21:10:47 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/06 16:56:07 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 //ft_isalpha.h
 int			ft_isalpha(int c);
-int			ft_isdigit(int c);
+//int			ft_isdigit(int c);
 //ft_isdigit.h
 int			ft_isdigit(int c);
 //ft_isalnum.h
@@ -25,7 +25,7 @@ int			ft_isascii(int c);
 //ft_isprint.h
 int			ft_isprint(int c);
 //ft_memset
-typedef int	t_size_t;
+typedef unsigned long	t_size_t;
 void		*ft_memset(void *str, int c, t_size_t n);
 //ft_strlen.h
 t_size_t	ft_strlen(const char *str);
@@ -40,10 +40,10 @@ t_size_t	ft_strlcpy(char *dest, const char *src, t_size_t size);
 //ft_strlcat
 t_size_t	ft_strlcat(char *dest, const char *src, t_size_t size);
 //ft_toupper
-int			ft_isupper(int c);
+//int			ft_isupper(int c);
 int			ft_toupper(int c);
 //ft_tolower
-int			ft_islower(int c);
+//int			ft_islower(int c);
 int			ft_tolower(int c);
 //ft_strchr
 char		*ft_strchr(const char *str, int c);

@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 20:41:36 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/04 21:09:20 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/06 16:53:10 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strnstr(const char *big, const char *little, t_size_t len)
 {
-	int	i;
-	int	j;
-	int	eq;
+	t_size_t	i;
+	t_size_t	j;
+	int			eq;
 
 	i = 0;
 	j = 0;

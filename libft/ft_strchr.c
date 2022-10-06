@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 17:17:55 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/04 17:43:33 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/06 16:52:34 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	int			i;
+	t_size_t	i;
 	t_size_t	size;
 
 	i = 0;

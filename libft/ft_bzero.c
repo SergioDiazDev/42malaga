@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 08:33:15 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/09/28 17:16:43 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/06 16:54:17 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, t_size_t n)
 {
-	int		i;
-	char	*str;
+	t_size_t	i;
+	char		*str;
 
 	i = 0;
 	str = s;
