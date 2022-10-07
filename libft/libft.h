@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:49:45 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/07 12:00:25 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/07 12:32:47 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,7 @@ char		*ft_strnstr(const char *big, const char *little, t_size_t len);
 int			ft_atoi(const char *str);
 //ft_calloc
 void		*ft_calloc(t_size_t nmemb, t_size_t size);
+//ft_strdup
+char		*ft_strdup(const char *s);
+
 #endif
