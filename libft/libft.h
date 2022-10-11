@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:49:45 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/07 12:32:47 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/11 11:44:57 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,23 @@ int			ft_atoi(const char *str);
 void		*ft_calloc(t_size_t nmemb, t_size_t size);
 //ft_strdup
 char		*ft_strdup(const char *s);
+//ft_substr
+// Reserva (con malloc(3)) y devuelve una substring de
+// la string ’s’.
+// La substring empieza desde el índice ’start’ y
+// tiene una longitud máxima ’len’.
+char		*ft_substr(char const *s, unsigned int start, t_size_t len);
+//ft_strjoin
+// Reserva (con malloc(3)) y devuelve una nueva
+// string, formada por la concatenación de ’s1’ y
+// ’s2’.
+char		*ft_strjoin(char const *s1, char const *s2);
+//ft_strtrim
+// Elimina todos los caracteres de la string ’set’
+// desde el principio y desde el final de ’s1’, hasta
+// encontrar un caracter no perteneciente a ’set’. La
+// string resultante se devuelve con una reserva de
+// malloc(3)
+char		*ft_strtrim(char const *s1, char const *set);
 
 #endif
