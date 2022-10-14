@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:49:45 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/11 11:44:57 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/13 10:06:09 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,11 @@ char		*ft_strjoin(char const *s1, char const *s2);
 // string resultante se devuelve con una reserva de
 // malloc(3)
 char		*ft_strtrim(char const *s1, char const *set);
+//ft_split
+// Reserva (utilizando malloc(3)) un array de strings
+// resultante de separar la string ’s’ en substrings
+// utilizando el caracter ’c’ como delimitador. El
+// array debe terminar con un puntero NULL.
+char		**ft_split(char const *s, char c);
 
 #endif
