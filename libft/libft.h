@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:49:45 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/13 10:06:09 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/15 00:45:27 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,10 @@ char		*ft_strtrim(char const *s1, char const *set);
 // utilizando el caracter ’c’ como delimitador. El
 // array debe terminar con un puntero NULL.
 char		**ft_split(char const *s, char c);
+//ft_itoa
+// Utilizando malloc(3), genera una string que
+// represente el valor entero recibido como argumento.
+// Los números negativos tienen que gestionarse.
+char		*ft_itoa(int n);
 
 #endif
