@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:49:45 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/15 00:45:27 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/15 16:10:46 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,12 @@ char		**ft_split(char const *s, char c);
 // represente el valor entero recibido como argumento.
 // Los números negativos tienen que gestionarse.
 char		*ft_itoa(int n);
+//ft_strmapi
+// A cada carácter de la string ’s’, aplica la
+// función ’f’ dando como parámetros el índice de cada
+// carácter dentro de ’s’ y el propio carácter. Genera
+// una nueva string con el resultado del uso sucesivo
+// de ’f’
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
