@@ -6,13 +6,15 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:49:45 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/15 16:10:46 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/15 18:10:58 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
+
 //ft_isalpha.h
 int			ft_isalpha(int c);
 //int			ft_isdigit(int c);
@@ -99,5 +101,32 @@ char		*ft_itoa(int n);
 // una nueva string con el resultado del uso sucesivo
 // de ’f’
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-
+//ft_striteri
+// A cada carácter de la string ’s’, aplica la función
+// ’f’ dando como parámetros el índice de cada
+// carácter dentro de ’s’ y la dirección del propio
+// carácter, que podrá modificarse si es necesario.
+void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+//ft_putchar_fd
+// Envía el carácter ’c’ al file descriptor
+// especificado.
+void		ft_putchar_fd(char c, int fd);
+//ft_putstr_fd
+void		ft_putstr_fd(char *s, int fd);
+//ft_putendl_fd
+void		ft_putendl_fd(char *s, int fd);
+//ft_putnbr_fd
+void		ft_putnbr_fd(int n, int fd);
+//BONUS
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+//ft_lstnew_bonus
+// Crea un nuevo nodo utilizando malloc(3). La
+// variable miembro ’content’ se inicializa con el
+// contenido del parámetro ’content’. La variable
+// ’next’, con NULL.
+t_list		*ft_lstnew(void *content);
 #endif
