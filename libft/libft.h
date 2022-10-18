@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:49:45 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/15 18:10:58 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/18 12:22:16 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,4 +129,40 @@ typedef struct s_list
 // contenido del parámetro ’content’. La variable
 // ’next’, con NULL.
 t_list		*ft_lstnew(void *content);
+//ft_lstadd_front_bonus
+// Añade el nodo ’new’ al principio de la lista ’lst’.
+void		ft_lstadd_front(t_list **lst, t_list *new);
+//ft_lstsize_bonus
+//Cuenta el número de nodos de una lista.
+int			ft_lstsize(t_list *lst);
+//ft_lstlast_bonus
+//Devuelve el último nodo de la lista.
+t_list		*ft_lstlast(t_list *lst);
+//ft_lstadd_back_bonus
+//Añade el nodo ’new’ al final de la lista ’lst’.
+void		ft_lstadd_back(t_list **lst, t_list *new);
+//ft_lstdelone_bonus
+// Toma como parámetro un nodo ’lst’ y libera la
+// memoria del contenido utilizando la función ’del’
+// dada como parámetro, además de liberar el nodo. La
+// memoria de ’next’ no debe liberarse.
+void		ft_lstdelone(t_list *lst, void (*del)(void*));
+//ft_lstclear_bonus
+// Elimina y libera el nodo ’lst’ dado y todos los
+// consecutivos de ese nodo, utilizando la función
+// ’del’ y free(3).
+// Al final, el puntero a la lista debe ser NULL.
+void		ft_lstclear(t_list **lst, void (*del)(void*));
+//ft_lstiter_bonus
+// Itera la lista ’lst’ y aplica la función ’f’ en el
+// contenido de cada nodo.
+void		ft_lstiter(t_list *lst, void (*f)(void *));
+//ft_lstmap_bonus
+// Itera la lista ’lst’ y aplica la función ’f’ al
+// contenido de cada nodo. Crea una lista resultante
+// de la aplicación correcta y sucesiva de la función
+// ’f’ sobre cada nodo. La función ’del’ se utiliza
+// para eliminar el contenido de un nodo, si hace
+// falta.
+t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 #endif
