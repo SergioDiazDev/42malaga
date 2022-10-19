@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:49:45 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/18 12:22:16 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/19 17:23:49 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,10 +112,13 @@ void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 // especificado.
 void		ft_putchar_fd(char c, int fd);
 //ft_putstr_fd
+//Envía la string ’s’ al file descriptor
+// especificado.
 void		ft_putstr_fd(char *s, int fd);
 //ft_putendl_fd
 void		ft_putendl_fd(char *s, int fd);
 //ft_putnbr_fd
+//Envía el número ’n’ al file descriptor dado.
 void		ft_putnbr_fd(int n, int fd);
 //BONUS
 typedef struct s_list
