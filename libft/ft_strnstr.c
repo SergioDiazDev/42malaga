@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 20:41:36 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/06 16:53:10 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/19 14:25:10 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,15 @@ char	*ft_strnstr(const char *big, const char *little, t_size_t len)
 	int			eq;
 
 	i = 0;
-	j = 0;
+	if (big == little)
+		return ((char *)big);
 	if (!little[0])
 		return ((char *)big);
 	while (big[i] && i < len)
 	{
 		eq = 1;
 		j = 0;
-		while (eq && (i + j < len))
+		while (eq && (i + j <= len))
 		{
 			if (!little[j])
 				return ((char *)(big + i));
@@ -34,7 +35,6 @@ char	*ft_strnstr(const char *big, const char *little, t_size_t len)
 				eq = 0;
 			j++;
 		}
-		eq = 0;
 		i++;
 	}
 	return (0);
