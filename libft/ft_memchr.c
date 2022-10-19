@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 20:22:50 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2022/10/06 16:54:58 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2022/10/19 14:39:28 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *str, int c, t_size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (aux[i] == c)
+		if (aux[i] == (char)c)
 			return ((aux + i));
 		i++;
 	}
