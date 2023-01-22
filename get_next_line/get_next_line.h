@@ -25,8 +25,10 @@ typedef unsigned long	t_size_t;
 void	ft_bzero(void *s, t_size_t n);
 void	*ft_calloc(t_size_t nmemb, t_size_t size);
 int		ft_strlen(char *str);
-char	*ft_free(void *ptr, void *ptr2);
-char	*ft_my_split(char *buf, int find_nl, char *static_line, int count_read);
+char	*ft_free(void *ptr, void *ptr1);
+void	*ft_memcpy(void *dest, const void *src, int n);
+char	*ft_strjoin(char *s1, char *s2);
 char	*get_next_line(int fd);
+char	*ft_read(int fd, char *static_line);
 
 #endif
