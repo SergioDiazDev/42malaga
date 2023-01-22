@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 11:00:02 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2023/01/18 16:03:48 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2023/01/22 13:27:43 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,42 +49,44 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-/**
- * @brief	Esta funcion se encarga de unir 2 String y reservarle un una nueva memoria
- * 			Dispone de un contador que limita los caracteres a copiar de la segunda String
- * 			Esta funcion tiene dependencias: ft_strlen y ft_calloc.
- * 
- * @param	char*	str1	Primera String
- * @param	char*	str2	Segunda String
- * @param	int		size	Tamaño a copiar de la segunda String. Si el tamaño <= 0 se ignora.
- */
-char	*ft_strjoin(char *str1, char *str2, int size)
+void	*ft_memcpy(void *dest, const void *src, int n)
 {
-	char	*out_string;
-	int		len_str1;
-	int		len_str2;
-	int		it1;
-	int		it2;
+	t_size_t		i;
+	const char		*s;
+	char			*d;
 
-	len_str1 = ft_strlen(str1);
-	if (size <= 0)
-		len_str2 = size;
-	else
-		len_str2 = ft_strlen(str2);
-	out_string = ft_calloc(sizeof(char), len_str1 + len_str2 + 1);
-	it1 = 0;
-	while (str1[it1])
+	s = (const char *)src;
+	d = (char *)dest;
+	i = 0;
+	if (!d && !s)
+		return (NULL);
+	while (i < n)
 	{
-		out_string[it1] = str1[it1];
-		it1++;
+		d[i] = s[i];
+		i++;
 	}
-	it2 = 0;
-	while (str2[it2] && it2 <= len_str2)
+	return (dest);
+}
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	int		size_s1;
+	int		size_s2;
+	int		i;
+	char	*aux;
+
+	i = 0;
+	size_s1 = ft_strlen(s1);
+	size_s2 = ft_strlen(s2);
+	aux = (char *)malloc((size_s1 + size_s2 + 1) * sizeof(char));
+	if (aux == NULL)
+		return (NULL);
+	aux = (char *)ft_memcpy(aux, s1, size_s1);
+	while (i < size_s1 + size_s2)
 	{
-		out_string[it1] = str2[it2];
-		it1++;
-		it2++;
+		aux[size_s1 + i] = s2[i];
+		i++;
 	}
-	out_string[len_str1 + len_str2 + 1] = '\0';
-	return (out_string);
+	aux[size_s1 + i] = '\0';
+	return (aux);
 }
