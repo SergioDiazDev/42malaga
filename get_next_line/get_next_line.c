@@ -42,7 +42,7 @@ char	*get_next_line(int fd)
 char	*ft_read(int fd, char *buff)
 {
 	if (!buff)
-		buff = ft_calloc(sizeof(char), BUFFER_SIZE)
+		buff = ft_calloc(sizeof(char), BUFFER_SIZE);
 }
 
 char	*ft_free(void *ptr, void *ptr1)
