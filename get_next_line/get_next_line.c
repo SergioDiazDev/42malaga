@@ -17,8 +17,8 @@ char *get_next_line(int fd)
 	static char	*buff = NULL;
 	char		*line;
 	char		*aux;
-	int			nl;
-	int			i;
+	int		nl;
+	int		i;
 
 	nl = ft_read(fd, buff);
 	if(!nl)
@@ -41,11 +41,11 @@ char *get_next_line(int fd)
 	return (line);
 }
 
-char *ft_read(int fd, char *buff)
+int ft_read(int fd, char *buff)
 {
 	char	*aux;
-	int		flag;
-	int		nl;
+	int	flag;
+	int	i;
 
 	flag = 1;
 	while (flag > 0)
