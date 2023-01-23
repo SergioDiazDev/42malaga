@@ -17,8 +17,8 @@ char *get_next_line(int fd)
 	static char	*buff = NULL;
 	char		*line;
 	char		*aux;
-	int		nl;
-	int		i;
+	int			nl;
+	int			i;
 
 	nl = ft_read(fd, buff);
 	if(!nl)
@@ -44,8 +44,8 @@ char *get_next_line(int fd)
 int ft_read(int fd, char *buff)
 {
 	char	*aux;
-	int	flag;
-	int	i;
+	int		flag;
+	int		i;
 
 	flag = 1;
 	while (flag > 0)
@@ -54,19 +54,19 @@ int ft_read(int fd, char *buff)
 		{
 			buff = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 			if (!aux)
-				return (ft_free(NULL, buff));
+				return ((int)ft_free(NULL, buff));
 			flag = read(fd, buff, BUFFER_SIZE);
 		}
 		else
 		{
 			aux = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 			if (!aux)
-				return (ft_free(aux, buff));
+				return ((int)ft_free(aux, buff));
 			flag = read(fd, aux, BUFFER_SIZE);
 			buff = ft_strjoin(buff, aux);
 		}
 		if (flag <= 0)
-				return (ft_free(aux, buff));
+				return ((int)ft_free(aux, buff));
 		i = 0;
 		while(buff[i] && flag > 0)
 		{
