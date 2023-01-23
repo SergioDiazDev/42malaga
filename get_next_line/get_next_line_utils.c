@@ -49,13 +49,13 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-void	*ft_memcpy(void *dest, const void *src, int n)
+void	*ft_memcpy(void *dest, void *src, int n)
 {
 	t_size_t		i;
-	const char		*s;
+	char			*s;
 	char			*d;
 
-	s = (const char *)src;
+	s = (char *)src;
 	d = (char *)dest;
 	i = 0;
 	if (!d && !s)
@@ -68,7 +68,7 @@ void	*ft_memcpy(void *dest, const void *src, int n)
 	return (dest);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	int		size_s1;
 	int		size_s2;
