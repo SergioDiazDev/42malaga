@@ -26,9 +26,9 @@ void	ft_bzero(void *s, t_size_t n);
 void	*ft_calloc(t_size_t nmemb, t_size_t size);
 int		ft_strlen(char *str);
 char	*ft_free(void *ptr, void *ptr1);
-void	*ft_memcpy(void *dest, const void *src, int n);
+void	*ft_memcpy(void *dest, void *src, int n);
 char	*ft_strjoin(char *s1, char *s2);
 char	*get_next_line(int fd);
-int   ft_read(int fd, char *static_line);
+int   	ft_read(int fd, char *static_line);
 
 #endif
