@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
 	static char	*buff = NULL;
 	char		*line;
@@ -21,8 +21,8 @@ char *get_next_line(int fd)
 	int			i;
 
 	nl = ft_read(fd, buff);
-	if(!nl)
-		return(ft_free(buff, NULL));
+	if (!nl)
+		return (ft_free(buff, NULL));
 	line = ft_calloc(sizeof(char), nl + 1);
 	if (!line || buff)
 		return (ft_free(line, buff));
@@ -41,7 +41,7 @@ char *get_next_line(int fd)
 	return (line);
 }
 
-int ft_read(int fd, char *buff)
+int	ft_read(int fd, char *buff)
 {
 	char	*aux;
 	int		flag;
@@ -53,7 +53,7 @@ int ft_read(int fd, char *buff)
 		if (!buff)
 		{
 			buff = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
-			if (!aux)
+			if (!buff)
 				return ((int)ft_free(NULL, buff));
 			flag = read(fd, buff, BUFFER_SIZE);
 		}
@@ -66,9 +66,9 @@ int ft_read(int fd, char *buff)
 			buff = ft_strjoin(buff, aux);
 		}
 		if (flag <= 0)
-				return ((int)ft_free(aux, buff));
+			return ((int)ft_free(aux, buff));
 		i = 0;
-		while(buff[i] && flag > 0)
+		while (buff[i] && flag > 0)
 		{
 			if (buff[i] == '\n')
 				flag = 0;
@@ -78,11 +78,11 @@ int ft_read(int fd, char *buff)
 	return (i - 1);
 }
 
-char *ft_free(void *ptr, void *ptr1)
+char	*ft_free(void *ptr, void *ptr1)
 {
-	if(ptr)
+	if (ptr)
 		free(ptr);
-	if(ptr1)
+	if (ptr1)
 		free(ptr1);
 	return (NULL);
 }
