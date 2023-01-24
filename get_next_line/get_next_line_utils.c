@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 11:00:02 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2023/01/22 13:27:43 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2023/01/24 12:41:17 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ int	ft_strlen(char *str)
 
 void	*ft_memcpy(void *dest, void *src, int n)
 {
-	t_size_t		i;
-	char			*s;
-	char			*d;
+	int		i;
+	char	*s;
+	char	*d;
 
 	s = (char *)src;
 	d = (char *)dest;
