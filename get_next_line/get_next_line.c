@@ -20,20 +20,21 @@ char	*get_next_line(int fd)
 	int			nl;
 	int			i;
 
-	nl = ft_read(fd, buff);
-	if (!nl)
-		return (ft_free(buff, NULL));
+	buff = ft_read(fd, buff);
+	nl = ft_nllen(buff);
 	line = ft_calloc(sizeof(char), nl + 1);
-	if (!line || buff)
-		return (ft_free(line, buff));
-	line = ft_memcpy(line, buff, nl);
+	if (!line || !buff)
+		return (ft_free(buff, line));
+	ft_memcpy(line, buff, nl);
 	i = 0;
-	while (buff[nl + 1 + i])
+	while (buff[nl + i])
 	{
-		buff[i] = buff[nl + 1 + i];
+		buff[i] = buff[nl + i];
 		i++;
 	}
 	aux = ft_calloc(sizeof(char), i + 1);
+	if (!aux || !buff)
+		return (ft_free(buff, aux));
 	ft_memcpy(aux, buff, i);
 	free(buff);
 	buff = aux;
@@ -41,41 +42,49 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-int	ft_read(int fd, char *buff)
+char	*ft_read(int fd, char *buff)
 {
 	char	*aux;
 	int		flag;
-	int		i;
 
 	flag = 1;
 	while (flag > 0)
 	{
+		if (buff)
+			if (ft_nllen(buff) != ft_strlen(buff))
+				break ;
 		if (!buff)
 		{
 			buff = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 			if (!buff)
-				return ((int)ft_free(NULL, buff));
+				return (ft_free(buff, NULL));
 			flag = read(fd, buff, BUFFER_SIZE);
 		}
 		else
 		{
 			aux = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 			if (!aux)
-				return ((int)ft_free(aux, buff));
+				return (ft_free(buff, aux));
 			flag = read(fd, aux, BUFFER_SIZE);
 			buff = ft_strjoin(buff, aux);
-		}
-		if (flag <= 0)
-			return ((int)ft_free(aux, buff));
-		i = 0;
-		while (buff[i] && flag > 0)
-		{
-			if (buff[i] == '\n')
-				flag = 0;
-			i++;
+			free(aux);
 		}
 	}
-	return (i - 1);
+	return (buff);
+}
+
+int	ft_nllen(char *buff)
+{
+	int nl;
+
+	nl = 0;
+	while (buff[nl])
+	{
+		if (buff[nl] == '\n')
+			return (++nl);
+		nl++;
+	}
+	return (nl);
 }
 
 char	*ft_free(void *ptr, void *ptr1)
