@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 11:00:02 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2023/01/24 12:41:17 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2023/01/25 10:43:55 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,24 +49,21 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-void	*ft_memcpy(void *dest, void *src, int n)
+char	*ft_memcpy(char *dest, char *src, int n)
 {
 	int		i;
-	char	*s;
-	char	*d;
 
-	s = (char *)src;
-	d = (char *)dest;
 	i = 0;
-	if (!d && !s)
+	if (!dest && !src)
 		return (NULL);
 	while (i < n)
 	{
-		d[i] = s[i];
+		dest[i] = src[i];
 		i++;
 	}
 	return (dest);
 }
+
 
 char	*ft_strjoin(char *s1, char *s2)
 {
@@ -81,7 +78,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	aux = (char *)malloc((size_s1 + size_s2 + 1) * sizeof(char));
 	if (aux == NULL)
 		return (NULL);
-	aux = (char *)ft_memcpy(aux, s1, size_s1);
+	aux = ft_memcpy(aux, s1, size_s1);
 	while (i < size_s1 + size_s2)
 	{
 		aux[size_s1 + i] = s2[i];
