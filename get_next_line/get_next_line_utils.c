@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 11:00:02 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2023/01/25 10:43:55 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2023/01/26 12:36:07 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ char	*ft_memcpy(char *dest, char *src, int n)
 	}
 	return (dest);
 }
-
 
 char	*ft_strjoin(char *s1, char *s2)
 {
