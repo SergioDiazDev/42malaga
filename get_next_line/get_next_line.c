@@ -20,10 +20,12 @@ char	*get_next_line(int fd)
 	int			nl;
 	int			i;
 
-	if (fd <= 0)
+	aux = NULL;
+	line = NULL;
+	if (fd <= 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	buff = ft_read(fd, buff);
-	if (!buff)
+	if (!buff || buff[0] == 0)
 		return (ft_free(buff, NULL));
 	nl = ft_nllen(buff);
 	line = ft_calloc(sizeof(char), nl + 1);
@@ -45,6 +47,7 @@ char	*ft_read(int fd, char *buff)
 	char	*aux;
 	int		flag;
 
+	aux = NULL;
 	flag = 1;
 	while (flag > 0)
 	{
@@ -55,6 +58,8 @@ char	*ft_read(int fd, char *buff)
 		{
 			buff = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 			flag = read(fd, buff, BUFFER_SIZE);
+			if (buff == NULL)
+				return (ft_free(buff, NULL));
 		}
 		else
 		{
@@ -62,6 +67,7 @@ char	*ft_read(int fd, char *buff)
 			flag = read(fd, aux, BUFFER_SIZE);
 			buff = ft_strjoin(buff, aux);
 			free(aux);
+			aux = NULL;
 		}
 		if (!buff)
 			return (ft_free(buff, NULL));
@@ -88,8 +94,14 @@ int	ft_nllen(char *buff)
 char	*ft_free(void *ptr, void *ptr1)
 {
 	if (ptr)
+	{
 		free(ptr);
+		ptr = NULL;
+	}
 	if (ptr1)
+	{
 		free(ptr1);
+		ptr1 = NULL;
+	}
 	return (NULL);
 }
