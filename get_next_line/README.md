@@ -1,27 +1,41 @@
-s
-a
-d
-asdf
-dg
-s
-gds
-gshgeherhdfg
-dfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhb
-dfgdfgefgdsiuhbdfgdfgefgdsiuhb
-dfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhb
-ddd
-dfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhbdfgdfgefgdsiuhb
-ddddddd
-12345
-3
-2
-1
-0
+##	libft
+Escribe tu propia librería: un conjunto de funciones que será una herramienta muy útil a lo largo del cursus.
+##	get_next_line
+Escribe una función que devuelva la línea leída de un file descriptor.
+1-------2--------3------
+
+
+hola
+##	libft
+Escribe tu propia librería: un conjunto de funciones que será una herramienta muy útil a lo largo del cursus.
+##	get_next_line
+Escribe una función que devuelva la línea leída de un file descriptor.
+
+-------3--------
+
+hola
+##	libft
+Escribe tu propia librería: un conjunto de funciones que será una herramienta muy útil a lo largo del cursus.
+##	get_next_line
+Escribe una función que devuelva la línea leída de un file descriptor.
+
+
+------4------
 
 
 
 
 
-ggg
-1
-4git 
+
+
+
+
+hola
+##	libft
+Escribe tu propia librería: un conjunto de funciones que será una herramienta muy útil a lo largo del cursus.
+##	get_next_line
+Escribe una función que devuelva la línea leída de un file descriptor.
+
+
+
+hola(NULL)
