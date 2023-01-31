@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 11:00:02 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2023/01/31 17:28:05 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2023/01/31 18:19:06 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,7 @@ void	*ft_calloc(t_size_t nmemb, t_size_t size)
 		return (NULL);
 	aux = malloc(nmemb * size);
 	if (!aux)
-	{
-		free(aux);
-		aux = NULL;
 		return (NULL);
-	}
 	ft_bzero(aux, nmemb * size);
 	return (aux);
 }
