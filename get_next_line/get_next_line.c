@@ -65,9 +65,8 @@ char	*ft_read(int fd, char *buff)
 			aux = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 			flag = read(fd, aux, BUFFER_SIZE);
 			buff = ft_strjoin(buff, aux);
+			//free(aux);
 		}
-		if (!buff)
-			return (NULL);
 	}
 	return (buff);
 }
