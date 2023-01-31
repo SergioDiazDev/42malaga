@@ -23,11 +23,7 @@ char	*get_next_line(int fd)
 	line = NULL;
 	aux = NULL;
 	if (fd <= 0 || BUFFER_SIZE <= 0)
-	{
-		free(buff);
-		buff = NULL;
 		return (NULL);
-	}
 	buff = ft_read(fd, buff);
 	if (!buff)
 	{
@@ -37,23 +33,11 @@ char	*get_next_line(int fd)
 	}
 	nl = ft_nllen(buff);
 	line = ft_calloc(sizeof(char), nl + 1);
-	if (!line)
-	{
-		free(line);
-		line = NULL;
-		return (NULL);
-	}
 	line = ft_memcpy(line, buff, nl);
 	i = -1;
 	while (buff[nl + ++i])
 		buff[i] = buff[nl + i];
 	aux = ft_calloc(sizeof(char), i + 1);
-	if (!aux)
-	{
-		free(aux);
-		aux = NULL;
-		return (NULL);
-	}
 	aux = ft_memcpy(aux, buff, i);
 	buff = aux;
 	return (line);
@@ -74,23 +58,11 @@ char	*ft_read(int fd, char *buff)
 		if (!buff)
 		{
 			buff = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
-			if (!buff)
-			{
-				free(buff);
-				buff = NULL;
-				return (NULL);
-			}
 			flag = read(fd, buff, BUFFER_SIZE);
 		}
 		else
 		{
 			aux = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
-			if (!aux)
-			{
-				free(aux);
-				aux = NULL;
-				return (NULL);
-			}
 			flag = read(fd, aux, BUFFER_SIZE);
 			buff = ft_strjoin(buff, aux);
 		}
