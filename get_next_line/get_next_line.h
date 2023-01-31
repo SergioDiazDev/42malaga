@@ -24,11 +24,13 @@ typedef unsigned long	t_size_t;
 
 void	ft_bzero(void *s, t_size_t n);
 void	*ft_calloc(t_size_t nmemb, t_size_t size);
+int		ft_strchr(const char *s, int c);
 int		ft_strlen(char *str);
-char	*ft_memcpy(char *dest, char *src, int n);
 char	*ft_strjoin(char *s1, char *s2);
 char	*get_next_line(int fd);
-int		ft_nllen(char *buff);
 char	*ft_read(int fd, char *buff);
+char	*ft_joinfree(char *str1, char *str2);
+char	*ft_get_line(char *buff);
+char	*ft_new_buff(char *buff);
 
 #endif

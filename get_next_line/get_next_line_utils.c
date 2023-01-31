@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 11:00:02 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2023/01/31 18:19:06 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2023/01/31 18:32:37 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,39 +49,48 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_memcpy(char *dest, char *src, int n)
+int	ft_strchr(const char *s, int c)
 {
 	int		i;
+	char	ch;
 
+	ch = (unsigned char)c;
 	i = 0;
-	if (!dest || !src)
-		return (NULL);
-	while (i < n)
+	if (!s)
+		return (0);
+	while (s[i] != '\0')
 	{
-		dest[i] = src[i];
+		if (s[i] == ch)
+			return (i);
 		i++;
 	}
-	return (dest);
+	if (s[i] == ch)
+		return (i);
+	return (0);
 }
 
 char	*ft_strjoin(char *s1, char *s2)
 {
-	int		size_s1;
-	int		size_s2;
-	int		i;
-	char	*aux;
+	unsigned int	i;
+	unsigned int	j;
+	char			*str;
 
 	i = 0;
-	size_s1 = ft_strlen(s1);
-	size_s2 = ft_strlen(s2);
-	aux = ft_calloc(sizeof(char), (size_s1 + size_s2 + 1));
-	aux = ft_memcpy(aux, s1, size_s1);
-	while (i < size_s1 + size_s2)
+	j = 0;
+	str = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!s1 || !s2 || !str)
+		return (0);
+	while (s1[i] != '\0')
 	{
-		aux[size_s1 + i] = s2[i];
+		str[i] = s1[i];
 		i++;
 	}
-	free(s1);
-	free(s2);
-	return (aux);
+	while (s2[j] != '\0')
+	{
+		str[i] = s2[j];
+		i++;
+		j++;
+	}
+	str[i] = '\0';
+	return (str);
 }
