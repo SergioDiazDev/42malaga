@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 11:00:02 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2023/01/29 15:45:39 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2023/01/31 13:19:10 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	i = 0;
 	size_s1 = ft_strlen(s1);
 	size_s2 = ft_strlen(s2);
-	aux = (char *)malloc((size_s1 + size_s2 + 1) * sizeof(char));
+	aux = ft_calloc(sizeof(char), (size_s1 + size_s2 + 1));
 	if (aux == NULL)
 	{
 		free(aux);
@@ -91,6 +91,5 @@ char	*ft_strjoin(char *s1, char *s2)
 		aux[size_s1 + i] = s2[i];
 		i++;
 	}
-	aux[size_s1 + i] = '\0';
 	return (aux);
 }
