@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 11:00:02 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2023/02/01 11:42:06 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2023/02/01 13:46:36 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ int	ft_strlen(char *str)
 {
 	int	i;
 
+	if (!str)
+		return (0);
 	i = 0;
 	while (str[i])
 		i++;
@@ -54,7 +56,7 @@ char	*ft_memcpy(char *dest, char *src, int n)
 	int		i;
 
 	i = 0;
-	if (!dest || !src)
+	if (!dest && !src)
 		return (NULL);
 	while (i < n)
 	{
@@ -81,7 +83,5 @@ char	*ft_strjoin(char *s1, char *s2)
 		aux[size_s1 + i] = s2[i];
 		i++;
 	}
-	//free(s1);
-	free(s2);
 	return (aux);
 }

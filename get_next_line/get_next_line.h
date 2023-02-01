@@ -30,5 +30,6 @@ char	*ft_strjoin(char *s1, char *s2);
 char	*get_next_line(int fd);
 int		ft_nllen(char *buff);
 char	*ft_read(int fd, char *buff);
+int		ft_truenl(char *buff);
 
 #endif

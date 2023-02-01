@@ -20,12 +20,10 @@ char	*get_next_line(int fd)
 	int			nl;
 	int			i;
 
-	line = NULL;
-	aux = NULL;
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (NULL);
 	buff = ft_read(fd, buff);
-	if (!buff || ft_strlen(buff) == 0)
+	if (ft_strlen(buff) == 0)
 	{
 		if (buff)
 		{
@@ -55,11 +53,10 @@ char	*ft_read(int fd, char *buff)
 	flag = 1;
 	while (flag > 0)
 	{
-		if (buff)
-			if (ft_nllen(buff) != ft_strlen(buff))
+		if (buff && ft_strlen(buff) == 0)
+			if (!ft_truenl(buff))
 				return (buff);
-		aux = NULL;
-		if (!buff)
+		if (ft_strlen(buff) == 0)
 		{
 			buff = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 			flag = read(fd, buff, BUFFER_SIZE);
@@ -68,6 +65,8 @@ char	*ft_read(int fd, char *buff)
 		{
 			aux = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 			flag = read(fd, aux, BUFFER_SIZE);
+			if (flag == 0)
+				return(free(aux), buff);
 			buff = ft_strjoin(buff, aux);
 		}
 	}
@@ -79,7 +78,7 @@ int	ft_nllen(char *buff)
 	int	nl;
 
 	nl = 0;
-	if (!buff)
+	if (ft_strlen(buff) == 0)
 		return (0);
 	while (buff[nl])
 	{
@@ -88,4 +87,18 @@ int	ft_nllen(char *buff)
 		nl++;
 	}
 	return (nl);
+}
+
+int	ft_truenl(char *buff)
+{
+	int	i;
+
+	i = 0;
+	while (buff[i])
+	{
+		if (buff[i] == '\n')
+			return (0);
+		i++;
+	}
+	return (i);
 }
