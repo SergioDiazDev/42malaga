@@ -22,8 +22,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (NULL);
-	aux = buff;
-	buff = ft_read(fd, aux);
+	buff = ft_read(fd, buff);
 	if (ft_strlen(buff) == 0)
 	{
 		if (buff)
@@ -49,15 +48,17 @@ char	*get_next_line(int fd)
 
 char	*ft_read(int fd, char *buff)
 {
-	char	*aux;
+	char	aux[BUFFER_SIZE + 1];
 	int		flag;
 
 	flag = 1;
 	while (flag > 0)
 	{
 		if (buff && ft_strlen(buff) == 0)
+		{
 			if (!ft_truenl(buff))
 				return (buff);
+		}
 		if (ft_strlen(buff) == 0)
 		{
 			buff = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
@@ -65,13 +66,14 @@ char	*ft_read(int fd, char *buff)
 		}
 		else
 		{
-			aux = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 			flag = read(fd, aux, BUFFER_SIZE);
+			aux[flag] = '\0';
 			if (flag == 0)
-				return (free(aux), buff);
+				return (buff);
 			buff = ft_strjoin(buff, aux);
-			free(aux);
 		}
+		if (!buff)
+			return (NULL);
 	}
 	return (buff);
 }
