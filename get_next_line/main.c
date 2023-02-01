@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 12:36:17 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2023/02/01 17:07:20 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2023/02/01 17:30:28 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@ int	main(void)
 		printf("%s", str);
 		if (!str)
 			break ;
+		free(str);
 	}
 	printf("\n--------------------------------------------------------------\n");
-	free(str);
 	close(i);
+	free(str);
 	system("leaks a.out");
 	return (0);
 }
