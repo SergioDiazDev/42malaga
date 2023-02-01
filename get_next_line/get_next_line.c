@@ -52,14 +52,11 @@ char	*ft_read(int fd, char *buff)
 	int		flag;
 
 	flag = 1;
+	if (ft_truenl(buff) == 0)
+		return (buff);
 	while (flag > 0)
 	{
-		if (buff && ft_strlen(buff) == 0)
-		{
-			if (!ft_truenl(buff))
-				return (buff);
-		}
-		if (ft_strlen(buff) == 0)
+		if (!buff || ft_strlen(buff) == 0)
 		{
 			buff = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 			flag = read(fd, buff, BUFFER_SIZE);
@@ -72,8 +69,6 @@ char	*ft_read(int fd, char *buff)
 				return (buff);
 			buff = ft_strjoin(buff, aux);
 		}
-		if (!buff)
-			return (NULL);
 	}
 	return (buff);
 }
@@ -99,6 +94,8 @@ int	ft_truenl(char *buff)
 	int	i;
 
 	i = 0;
+	if (!buff)
+		return (-1);
 	while (buff[i])
 	{
 		if (buff[i] == '\n')
