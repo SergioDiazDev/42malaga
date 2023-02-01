@@ -55,10 +55,10 @@ char	*ft_read(int fd, char *buff)
 	flag = 1;
 	while (flag > 0)
 	{
-		aux = NULL;
 		if (buff)
 			if (ft_nllen(buff) != ft_strlen(buff))
 				return (buff);
+		aux = NULL;
 		if (!buff)
 		{
 			buff = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
