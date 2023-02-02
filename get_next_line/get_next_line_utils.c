@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 11:00:02 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2023/02/02 13:11:56 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2023/02/03 00:50:50 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ void	*ft_calloc(t_size_t nmemb, t_size_t size)
 {
 	void	*aux;
 
-	if (size < 0)
-		return (NULL);
 	aux = malloc(nmemb * size);
 	if (!aux)
 		return (NULL);
@@ -76,14 +74,14 @@ char	*ft_strjoin(char *s1, char *s2)
 	i = 0;
 	size_s1 = ft_strlen(s1);
 	size_s2 = ft_strlen(s2);
-	aux = calloc(sizeof(char), (size_s1 + size_s2 + 1));
+	aux = ft_calloc(sizeof(char), (size_s1 + size_s2 + 1));
 	ft_memcpy(aux, s1, size_s1);
-	while (i < size_s1 + size_s2)
+	while (i < size_s2)
 	{
 		aux[size_s1 + i] = s2[i];
 		i++;
 	}
-	//free(s1);
+	free(s1);
 	free(s2);
 	return (aux);
 }

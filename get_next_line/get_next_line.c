@@ -26,14 +26,15 @@ char	*get_next_line(int fd)
 	if (ft_strlen(buff) == 0)
 		return (NULL);
 	nl = ft_nllen(buff);
-	line = calloc(sizeof(char), nl + 1);
+	line = ft_calloc(sizeof(char), nl + 1);
 	line = ft_memcpy(line, buff, nl);
 	i = -1;
 	while (buff[nl + ++i])
 		buff[i] = buff[nl + i];
 	aux = ft_calloc(sizeof(char), i + 1);
 	aux = ft_memcpy(aux, buff, i);
-	buff = calloc(sizeof(char), i + 1);
+	free(buff);
+	buff = ft_calloc(sizeof(char), i + 1);
 	buff = ft_memcpy(buff, aux, i);
 	return (free(aux), line);
 }
@@ -54,12 +55,12 @@ char	*ft_read(int fd, char *buff)
 		}
 		if (!buff || ft_strlen(buff) == 0)
 		{
-			buff = calloc(sizeof(char), BUFFER_SIZE + 1);
+			buff = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 			flag = read(fd, buff, BUFFER_SIZE);
 		}
 		else
 		{
-			aux = calloc(sizeof(char), BUFFER_SIZE + 1);
+			aux = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 			flag = read(fd, aux, BUFFER_SIZE);
 			if (flag == 0)
 				return (free(aux), buff);
