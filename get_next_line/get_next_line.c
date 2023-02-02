@@ -24,49 +24,45 @@ char	*get_next_line(int fd)
 		return (NULL);
 	buff = ft_read(fd, buff);
 	if (ft_strlen(buff) == 0)
-	{
-		if (buff)
-		{
-			free(buff);
-			buff = NULL;
-		}
 		return (NULL);
-	}
 	nl = ft_nllen(buff);
-	line = ft_calloc(sizeof(char), nl + 1);
+	line = calloc(sizeof(char), nl + 1);
 	line = ft_memcpy(line, buff, nl);
 	i = -1;
 	while (buff[nl + ++i])
 		buff[i] = buff[nl + i];
 	aux = ft_calloc(sizeof(char), i + 1);
 	aux = ft_memcpy(aux, buff, i);
-	free(buff);
-	buff = ft_calloc(sizeof(char), i + 1);
+	buff = calloc(sizeof(char), i + 1);
 	buff = ft_memcpy(buff, aux, i);
 	return (free(aux), line);
 }
 
 char	*ft_read(int fd, char *buff)
 {
-	char	aux[BUFFER_SIZE + 1];
+	char	*aux;
 	int		flag;
 
 	flag = 1;
-	if (ft_truenl(buff) == 0)
-		return (buff);
+	
 	while (flag > 0)
 	{
+		if (ft_truenl(buff) == 0)
+		{
+			if (buff[0] != '\0')
+				return (buff);
+		}
 		if (!buff || ft_strlen(buff) == 0)
 		{
-			buff = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
+			buff = calloc(sizeof(char), BUFFER_SIZE + 1);
 			flag = read(fd, buff, BUFFER_SIZE);
 		}
 		else
 		{
+			aux = calloc(sizeof(char), BUFFER_SIZE + 1);
 			flag = read(fd, aux, BUFFER_SIZE);
-			aux[flag] = '\0';
 			if (flag == 0)
-				return (buff);
+				return (free(aux), buff);
 			buff = ft_strjoin(buff, aux);
 		}
 	}
