@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
+#  define BUFFER_SIZE 10
 # endif
 
 # include <unistd.h>
@@ -22,7 +22,6 @@
 
 typedef unsigned long	t_size_t;
 
-void	ft_bzero(void *s, t_size_t n);
 void	*ft_calloc(t_size_t nmemb, t_size_t size);
 int		ft_strlen(char *str);
 char	*ft_memcpy(char *dest, char *src, int n);
