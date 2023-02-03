@@ -34,9 +34,7 @@ char	*get_next_line(int fd)
 	aux = ft_calloc(sizeof(char), i + 1);
 	aux = ft_memcpy(aux, buff, i);
 	free(buff);
-	buff = ft_calloc(sizeof(char), i + 1);
-	buff = ft_memcpy(buff, aux, i);
-	free(aux);
+	buff = aux;
 	return (line);
 }
 

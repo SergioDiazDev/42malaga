@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 12:36:17 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2023/02/03 11:52:14 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2023/02/03 14:02:07 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(void)
 	int		i;
 	char	*str;
 
-	i = open("README.md", O_RDONLY);
+	i = open("get_next_line.c", O_RDONLY);
 	printf("\n--------------------------------------------------------------\n");
 	while (1)
 	{
