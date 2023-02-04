@@ -19,7 +19,7 @@ int	main(void)
 	int		i;
 	char	*str;
 
-	i = open("get_next_line.c", O_RDONLY);
+	i = open("README.md", O_RDONLY);
 	printf("\n--------------------------------------------------------------\n");
 	while (1)
 	{
@@ -31,6 +31,6 @@ int	main(void)
 	}
 	printf("\n--------------------------------------------------------------\n");
 	close(i);
-	system("leaks a.out");
+	//system("leaks a.out");
 	return (0);
 }
