@@ -30,6 +30,8 @@ void	*ft_calloc(t_size_t nmemb, t_size_t size)
 {
 	void	*aux;
 
+	if (size == 0)
+		return (NULL);
 	aux = malloc(nmemb * size);
 	if (!aux)
 		return (NULL);

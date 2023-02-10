@@ -25,7 +25,11 @@ char	*get_next_line(int fd)
 	buff = ft_read(fd, buff);
 	nl = ft_nllen(buff);
 	if (nl == 0)
+	{
+		if (!buff)
+			return (NULL);
 		return (free(buff), NULL);
+	}
 	line = ft_calloc(sizeof(char), nl + 1);
 	line = ft_memcpy(line, buff, nl);
 	i = -1;
@@ -33,8 +37,7 @@ char	*get_next_line(int fd)
 		buff[i] = buff[nl + i];
 	aux = ft_calloc(sizeof(char), i + 1);
 	aux = ft_memcpy(aux, buff, i);
-	if (buff)
-		free(buff);
+	free(buff);
 	buff = aux;
 	return (line);
 }
