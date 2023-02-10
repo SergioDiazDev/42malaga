@@ -33,7 +33,8 @@ char	*get_next_line(int fd)
 		buff[i] = buff[nl + i];
 	aux = ft_calloc(sizeof(char), i + 1);
 	aux = ft_memcpy(aux, buff, i);
-	free(buff);
+	if (buff)
+		free(buff);
 	buff = aux;
 	return (line);
 }
