@@ -6,7 +6,7 @@
 /*   By: sdiaz-ru <sdiaz-ru@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 13:36:58 by sdiaz-ru          #+#    #+#             */
-/*   Updated: 2023/02/13 17:38:20 by sdiaz-ru         ###   ########.fr       */
+/*   Updated: 2023/02/13 19:41:31 by sdiaz-ru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,11 @@ char	*ft_read(int fd, char *buff)
 	int		flag;
 
 	flag = 1;
+	aux = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 	while (flag > 0)
 	{
 		if (ft_truenl(buff) == 0 && buff[0] != '\0')
-			return (buff);
+			return (free(aux), buff);
 		if (!buff)
 		{
 			buff = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
@@ -58,7 +59,6 @@ char	*ft_read(int fd, char *buff)
 		}
 		else
 		{
-			aux = ft_calloc(sizeof(char), BUFFER_SIZE + 1);
 			flag = read(fd, aux, BUFFER_SIZE);
 			if (flag == 0)
 				return (free(aux), buff);
@@ -67,7 +67,7 @@ char	*ft_read(int fd, char *buff)
 			buff = ft_strjoin(buff, aux);
 		}
 	}
-	return (buff);
+	return (free(aux), buff);
 }
 
 int	ft_nllen(char *buff)
