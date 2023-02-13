@@ -25,7 +25,10 @@ char	*get_next_line(int fd)
 	buff = ft_read(fd, buff);
 	nl = ft_nllen(buff);
 	if (nl == 0)
-		return (free(buff), NULL);
+	{
+		free(buff);
+		return (buff = NULL, NULL);
+	}
 	line = ft_calloc(sizeof(char), nl + 1);
 	line = ft_memcpy(line, buff, nl);
 	i = -1;
@@ -59,6 +62,8 @@ char	*ft_read(int fd, char *buff)
 			flag = read(fd, aux, BUFFER_SIZE);
 			if (flag == 0)
 				return (free(aux), buff);
+			if (flag < 0)
+				return (free(aux), free(buff), NULL);
 			buff = ft_strjoin(buff, aux);
 		}
 	}
